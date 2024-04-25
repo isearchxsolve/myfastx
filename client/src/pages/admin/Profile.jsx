@@ -1,17 +1,13 @@
-
+import profileImg from '../../assets/admin/adminProfile.png'
 import camera from '../../assets/admin/camera.png'
 import done from '../../assets/admin/Done.png'
-import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
 const Profile=()=>{
-    const {currentAdmin} = useSelector(state=> state.admin);
-        // const dispatch=useDispatch();
     return(
         <div className='w-full flex flex-col'>
             <div className='w-8/12 pt-4 flex flex-col items-center mb-6'>
                 <div className='relative'>
                     <div>
-                        <img className='h-28 rounded-full' src={currentAdmin.avatar} alt="" />
+                        <img className='h-28' src={profileImg} alt="" />
                     </div>
                     <div className='absolute top-20 left-20 flex bg-blue-950 h-6 w-6 items-center justify-center rounded-full '>
                         <img src={camera} alt="" />
@@ -24,29 +20,38 @@ const Profile=()=>{
                     <h1>Personal</h1>
                     <h1 className='ml-28'>Address</h1>
                 </div>
-                <div className='w-9/12'>
-                    <h1 className='text-sm font-medium pb-1'>Name</h1>
-                    <div className='w-10/12 h-8 flex items-center px-2 rounded-md border'>
-                        <input className='text-sm focus:outline-none w-11/12' type="text" placeholder='Enter your name' defaultValue={currentAdmin.name} />
-                        <img className='h-4' src={done} alt="" />
+                <div className='w-9/12 flex'>
+                    <div>
+                        <h1 className='text-sm font-medium pb-1'>First Name</h1>
+                        <div className='w-11/12 h-8 flex items-center px-2 rounded-md border'>
+                            <input className='text-sm focus:outline-none w-11/12' type="text" placeholder='Enter first name' />
+                            <img className='h-4' src={done} alt="" />
+                        </div>
+                    </div>
+                    <div>
+                        <h1 className='text-sm font-medium pb-1'>Last Name</h1>
+                        <div className='w-11/12 h-8 flex items-center px-2 rounded-md border'>
+                            <input className='text-sm focus:outline-none w-11/12' type="text" placeholder='Enter last name' />
+                            <img className='h-4' src={done} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className='w-9/12 my-4'>
                     <h1 className='text-sm font-medium pb-1'>Location</h1>
                     <div className='w-10/12 border rounded-md h-8 flex items-center px-2'>
-                        <input className='text-sm' type="text" placeholder='Enter your location' defaultValue={currentAdmin.location}/>
+                        <input className='text-sm' type="text" placeholder='Enter your location'/>
                     </div>
                 </div>
                 <div className='w-9/12 mb-4'>
                     <h1 className='text-sm font-medium pb-1'>Contact No.</h1>
                     <div className='w-10/12 border rounded-md h-8 flex items-center px-2'>
-                        <input className='text-sm' type="text" placeholder='+91' defaultValue={currentAdmin.mobile}/>
+                        <input className='text-sm' type="text" placeholder='+91'/>
                     </div>
                 </div>
                 <div className='w-9/12 mb-4'>
                     <h1 className='text-sm font-medium pb-1'>Email Id</h1>
                     <div className='w-10/12 border rounded-md h-8 flex items-center px-2'>
-                        <input className='text-sm' type="email" placeholder='eg. abc@gmail.com' defaultValue={currentAdmin.email}/>
+                        <input className='text-sm' type="email" placeholder='eg. abc@gmail.com'/>
                     </div>
                 </div>
                 <div className='w-9/12 my-4 items-center'>

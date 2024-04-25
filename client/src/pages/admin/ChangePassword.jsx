@@ -1,8 +1,6 @@
 import {Link} from 'react-router-dom'
 import hide from '../../assets/admin/hideIcon.png'
-import { useSelector } from 'react-redux'
 const ChangePassword=()=>{
-  const {currentAdmin} = useSelector(state=> state.admin);
     return(
         <div className='w-full flex flex-col'>
             <div className='w-10/12 pt-4 flex flex-col items-center mb-6'>
@@ -14,7 +12,7 @@ const ChangePassword=()=>{
                     <h1 className='font-semibold'>Email Address</h1>
                   </div>
                   <div className='flex w-full justify-between'>
-                    <h1 className='text-sm'>Your email address is <span className='font-semibold'>{currentAdmin.email}</span></h1>
+                    <h1 className='text-sm'>Your email address is <span className='font-semibold'>Priya.mohan@gmail.com</span></h1>
                     <Link className='text-red-600'>change</Link>
                   </div>
                   <hr className='border-t-2 my-4'/>

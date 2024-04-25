@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux';
+
 import analysis from '../../assets/admin/analysis.png'
 import growth from '../../assets/admin/growth.png'
 import newChat from '../../assets/admin/newChat.png'
@@ -20,7 +20,6 @@ import profile from '../../assets/admin/profile.png'
 
 import { NavLink, Outlet } from 'react-router-dom'
 const Admin=()=>{
-    const {currentAdmin} = useSelector(state=> state.admin);
     const [open, setOpen] = useState(false);
     const activeLink='bg-green-200 text-deep-green'
     const normalLink=''
@@ -198,10 +197,10 @@ const Admin=()=>{
                         </div>
                         </div>
                     </div>
-                    <div className='flex gap-1 w-1/5 items-center'>
+                    <div className='flex w-1/5 items-center'>
                         <h1>hello,</h1>
-                        <h1>{currentAdmin.name}</h1>
-                        <img className='h-10 px-2 rounded-full' src={currentAdmin.avatar} alt="" />
+                        <h1>Priyanka</h1>
+                        <img className='h-10 px-2' src={profile} alt="" />
                     </div>
                 </div>
 
